@@ -1,2 +1,2 @@
 # Cellular-Automaton
-implementatio nof Cellular automata rule 30
+Implementation of Cellular automata rule 30
