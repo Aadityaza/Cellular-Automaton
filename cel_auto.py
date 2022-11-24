@@ -3,7 +3,7 @@ class pos:
     x=None
     y=None
     def __init__ (self, x,y):
-        print("applying rule to pos " +str(x)+", "+str(y))
+        #print("applying rule to pos " +str(x)+", "+str(y))
         self.x=x
         self.y=y
 
@@ -50,7 +50,7 @@ n= int(input('Enter the no of ittirations: '))
 print(str(n)+" ittirations to run...")
 
 #defining shape    
-s=(n,(2**(n-1))+n)
+s=(n,n+2*(n-1))
 
 # make m*n (s) marix to 
 import numpy as np
