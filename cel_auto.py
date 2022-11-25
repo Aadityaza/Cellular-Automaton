@@ -1,21 +1,18 @@
-# defining locations
+# defining position
 class pos:
     x=None
     y=None
     def __init__ (self, x,y):
-        #print("applying rule to pos " +str(x)+", "+str(y))
         self.x=x
         self.y=y
-
+    #neighbours
     def top(self):
         return self.x-1,self.y
     def right(self):
         return self.x-1,self.y+1
     def left(self):
         return self.x-1,self.y-1 
-    
-        
-    
+       
 # define cellular automation rule
 def rule_30(i,j,matrix):
     position=pos(i,j)
@@ -43,7 +40,7 @@ def rule_30(i,j,matrix):
         return 1
     if left==0 and top==1 and right==0:
         return 1
-    
+# define cellular automation rule   
 def my_rule(i,j,matrix):
     position=pos(i,j)
 
@@ -53,41 +50,22 @@ def my_rule(i,j,matrix):
     right=matrix[position.right()[0]%m][position.right()[1]%m]
     return ((top-left-right ))%2
 
-    # #rule for 0
-    # if left==1 and top==1 and right==1:
-    #     return 0
-    # if left==1 and top==1 and right==0:
-    #     return 0
-    # if left==1 and top==0 and right==1:
-    #     return 0
-    # if left==0 and top==0 and right==0:
-    #     return 0
-    # # rule for 1
-    # if left==1 and top==0 and right==0:
-    #     return 1
-    # if left==0 and top==1 and right==1:
-    #     return 1
-    # if left==0 and top==0 and right==1:
-    #     return 1
-    # if left==0 and top==1 and right==0:
-    #     return 1
-    
-
-#taking no if ittirations
+#Reading Number of Itirations
 n= int(input('Enter the no of ittirations: '))
 print(str(n)+" ittirations to run...")
 
-#defining shape    
+#defining shape of output matrix    
 s=(n,n+2*(n-1))
 
-# make m*n (s) marix to 
+# Creating m*n (s) Marix 
 import numpy as np
 matrix=np.zeros(s)
 
-# run rule in matrix (start = middle of the row )
+# Setting up middle value of 1st row to zero
 n,m=matrix.shape
 matrix[0,int((m-1)/2)]=1
 
+# Applying rule to each element of matrix
 for i in range(1,n):
     for j in range(m):
         matrix[i,j]=rule_30(i,j,matrix)
