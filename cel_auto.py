@@ -74,5 +74,6 @@ print(matrix)
 
 # display the image
 from matplotlib import pyplot as plt
+
 plt.imshow(matrix,interpolation='nearest')
 plt.show()
