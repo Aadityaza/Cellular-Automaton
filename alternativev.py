@@ -24,6 +24,7 @@ for i in range(1, 20):
 print(rule_30_grid)
 
 #displaying thhe image
+import matplotlib.pyplot as plt
 plt.imshow(matrix, cmap="binary")
 
 # Turn off the axis labels
