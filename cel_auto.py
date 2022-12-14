@@ -15,9 +15,10 @@ class pos:
        
 # define cellular automation rule
 def rule_30(i,j,matrix):
+ # Get matrix shape and compute the position of the cell at (i, j)
     position=pos(i,j)
-
     n,m=matrix.shape
+# Get the values of the cells to the left, top, and right of the cell at (i, j)
     left= matrix[position.left()[0]%m][position.left()[1]%m]
     top= matrix[position.top()[0]%m][position.top()[1]%m]
     right=matrix[position.right()[0]%m][position.right()[1]%m]
@@ -73,7 +74,12 @@ for i in range(1,n):
 print(matrix)
 
 # display the image
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 
-plt.imshow(matrix,interpolation='nearest')
+plt.imshow(matrix, cmap="binary")
+
+# Turn off the axis labels
+plt.axis("off")
+
+# Show the plot
 plt.show()
