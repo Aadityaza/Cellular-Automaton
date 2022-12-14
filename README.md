@@ -3,8 +3,8 @@ Implementation of Cellular automata
 
 Rule 30
 
-![rule 30](https://user-images.githubusercontent.com/45432533/204028296-674c10ae-a953-4108-aef6-d58b884ae512.png)
+![image](https://user-images.githubusercontent.com/45432533/207675143-159301b4-372a-4914-9960-5e653c7994cb.png)
 
 Rule (top-left-right)%2
 
-![rule (return ((top-left-right ))%2)](https://user-images.githubusercontent.com/45432533/204028289-d2508088-5955-4050-9525-9f438119b685.png)
+![image](https://user-images.githubusercontent.com/45432533/207675446-f4f6cf6c-5bbe-4990-ab93-4326114cdffe.png)
